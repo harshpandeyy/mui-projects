@@ -24,8 +24,9 @@ const StyledToolbar = styled(Toolbar)({
 const Search = styled("div")(({ theme }) => ({
     display: "flex",
     width: "40%",
-    padding:10,
-    borderRadius: theme.shape.borderRadius
+    padding: 2,
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor:'#eee'
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
@@ -67,7 +68,7 @@ export default class Navbar extends Component {
                     >
                         TinDog
                     </Typography>
-                    <PetsIcon sx={{ display: { xs: "block", sm: "block" } }} />
+                    <PetsIcon sx={{ display: { xs: "block", sm: "none" } }} />
 
                     <Search>
                         <InputBase placeholder="Search" />
@@ -85,14 +86,16 @@ export default class Navbar extends Component {
                             onClick={(e) => this.setState({ open: true })}
                             src="https://images.unsplash.com/photo-1539208053872-3abdcead5fe1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1113&q=80"
                         />
+                        <Typography>Harsh</Typography>
+
                     </Icons>
-                    <UserBox onClick={(e)=>this.setState({open:true})}>
+                    <UserBox onClick={(e) => this.setState({ open: true })}>
                         <Avatar
                             sx={{ width: 25, height: 25 }}
                             alt="Unsplash image"
                             src="https://images.unsplash.com/photo-1539208053872-3abdcead5fe1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1113&q=80"
                         />
-                        <Typography>Harsh</Typography>
+
                     </UserBox>
                 </StyledToolbar>
                 <Menu
@@ -100,7 +103,7 @@ export default class Navbar extends Component {
                     aria-labelledby="demo-positioned-button"
                     // anchorEl={anchorEl}
                     open={this.state.open}
-                    onClose={(e)=>this.setState({open:false})}
+                    onClose={(e) => this.setState({ open: false })}
                     anchorOrigin={{
                         vertical: 'top',
                         horizontal: 'right',

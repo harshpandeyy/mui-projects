@@ -8,7 +8,7 @@ export default class RightBar extends Component {
         return (
             <Box flex={2} p={2} sx={{ display: { xs: 'none', sm: 'block' } }}>
                 <Box position='fixed'>
-                    <Typography variant='h6'>Online friends</Typography>
+                    <Typography variant='h6' margin='8px 0'>Online friends</Typography>
                     <AvatarGroup max={6}>
                         <Avatar alt="Remy Sharp" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" />
                         <Avatar alt="Travis Howard" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" />
@@ -20,6 +20,9 @@ export default class RightBar extends Component {
                         <Avatar alt="Agnes Walker" src="/static/images/avatar/4.jpg" />
                         <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
                     </AvatarGroup>
+
+                    <Typography variant='h6' margin='8px 0'>Latest photos</Typography>
+
                     <ImageList cols={3} rowHeight={164}>
                         {itemData.map((item) => (
                             <ImageListItem key={item.img}>
@@ -32,6 +35,8 @@ export default class RightBar extends Component {
                             </ImageListItem>
                         ))}
                     </ImageList>
+
+                    <Typography variant='h6' >Latest conversations</Typography>
 
                     <List >
                         <ListItem alignItems="flex-start">

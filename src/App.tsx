@@ -4,6 +4,7 @@ import SideBar from "./components/SideBar";
 import RightBar from "./components/RightBar";
 import Feed from "./components/Feed";
 import { Box, Container, Stack } from "@mui/material";
+import { Add } from "@mui/icons-material";
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,7 @@ export default class App extends Component {
           <Feed />
           <RightBar />
         </Stack>
+      <Add/>
       </Box>
     );
   }
